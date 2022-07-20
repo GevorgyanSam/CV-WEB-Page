@@ -1,0 +1,1236 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(../img/23.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+body::-webkit-scrollbar{
+    background-color: rgb(0, 0, 0);
+    transition: .5s;
+}
+body::-webkit-scrollbar-thumb{
+    background-color: rgb(102, 102, 102);
+    border-radius: 20px;
+    transition: .5s;
+}
+body::-webkit-scrollbar-thumb:hover{
+    background-color: rgb(70, 70, 70);
+}
+body::-webkit-scrollbar-thumb:active{
+    background-color: rgb(48, 48, 48);
+}
+.parent{
+    width: 60%;
+    margin: 0 auto;
+}
+
+
+
+
+
+                    /* Nav */
+
+
+
+
+
+.navparent{
+    background-color: rgb(0, 0, 0);
+    height: 90px;
+    width: 60%;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 1;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.navparent .nav1{
+    margin-right: 150px;
+    animation: to_right 1.5s;
+}
+@keyframes to_right {
+    from{
+        margin-right: 350px;
+        margin-top: -150px;
+        opacity: 0;
+    }
+    50%{
+        margin-top: 20px;
+    }
+    to{
+        margin-right: 150px;
+        margin-top: 0;
+        opacity: 1;
+    }
+}
+.navparent .nav2{
+    margin-left: 200px;
+    animation:  to_left 1.5s;
+}
+@keyframes to_left {
+    from{
+        margin-top: -150px;
+    }
+    50%{
+        margin-top: 20px;
+    }
+    to{
+        margin-top: 0;
+    }
+}
+.navparent .nav1 ul{
+    list-style: none;
+}
+.navparent .nav1 ul li {
+    display: inline-block;
+}
+.navparent .nav1 ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 40px;
+    font-family: 'Dancing Script', cursive;
+    font-weight: bold;
+}
+.navparent .nav1 ul li a::before{
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 0px;
+    background-color: rgba(255, 255, 255, 0.5);
+    top: 60px;
+    left: 218px;
+    transition: .5s;
+    transform: translate(-50%);
+}
+.navparent .nav1 ul li a:hover::before{
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 267px;
+    background-color: white;
+    top: 72px;
+}
+.navparent .nav2 ul{
+    list-style: none;
+}
+.navparent .nav2 ul li {
+    display: inline-block;
+    padding: 25px;
+}
+.navparent .nav2 ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+    padding-bottom: 10px;
+    transition: .7s;
+    font-family: 'Dancing Script', cursive;
+}
+.navparent .nav2 ul li a::before{
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 0px;
+    background-color: rgba(255, 255, 255, 0.5);
+    top: 63px;
+    transform-origin: left;
+    transition: .7s;
+}
+.navparent .nav2 ul li a:hover::before{
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 45px;
+    background-color: white;
+    top: 63px;
+    transform-origin: left;
+}
+.navparent .nav2 ul li a:hover{
+    text-shadow: 1px 1px 10px white;
+}
+.navparent .nav2 ul li a:focus::before{
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 45px;
+    background-color: white;
+    top: 63px;
+    transform-origin: left;
+}
+.navparent .nav2 ul li a:focus{
+    text-shadow: 1px 1px 10px white;
+}
+
+
+
+
+
+                    /* Home */
+
+
+                    
+
+
+#home{
+    height: 500px;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding-top: 140px;
+    border-radius: 20px;
+}
+#home h1{
+    font-size: 60px;
+    font-family: 'Dancing Script', cursive;
+    margin-left: 60px;
+    color: white;
+    transition: .7s;
+    animation: to_left2 1.5s;
+}
+@keyframes to_left2 {
+    from{
+        color: rgba(255, 255, 255, 0);
+        margin-left: -20px;
+    }
+    50%{
+        margin-left: 90px;
+    }
+    to{
+        color: white;
+        margin-left: 60px;
+    }
+}
+#home p{
+    color: white;
+    line-height: 55px;
+    letter-spacing: 2px;
+    font-size: 20px;
+    margin-left: 80px;
+    font-family: cursive;
+    font-style: italic;
+    margin-top: 20px;
+    animation: paragraph_anim1 1.5s;
+}
+@keyframes paragraph_anim1 {
+    from{
+        color: rgba(255, 255, 255, 0);
+        margin-left: 0px;
+    }
+    50%{
+        margin-left: 110px;
+    }
+    to{
+        color: white;
+        margin-left: 80px;
+    }
+}
+#home p::before{
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 190px;
+    background-color: white;
+    top: 280px;
+    left: 622px;
+    animation: underline 1.5s;
+    transform: translate(-50%);
+}
+@keyframes underline {
+    from{
+        width: 0px;
+        top: 262px;
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+    50%{
+        top: 310px;
+    }
+    to{
+        width: 190px;
+        top: 280px;
+        background-color: white;
+    }
+}
+.logo{
+    margin-top: 40px;
+    margin-left: 100px;
+    animation: logo_anim 1.5s;
+    opacity: 1;
+    display: flex;
+}
+@keyframes logo_anim {
+    from{
+        margin-left: 20px;
+        opacity: 0;
+    }
+    50%{
+        margin-left: 130px;
+    }
+    to{
+        margin-left: 100px;
+        opacity: 1;
+    }
+}
+.logo div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0);
+    margin: 0 10px;
+    padding: 5px;
+    cursor: pointer;
+    transition: .5s;
+}
+.logo div:hover{
+    border: 1px solid rgb(255, 255, 255);
+}
+.logo img{
+    height: 25px;
+    width: 25px;
+}
+
+
+
+
+
+                    /* About  */
+
+
+
+
+
+#about{
+    margin-top: 50px;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    border-radius: 20px;
+    padding-bottom: 40px;
+}
+#about span{
+    color: white;
+    font-size: 32px;
+    font-family: 'Dancing Script', cursive;
+    margin-left: 100px;
+    display: block;
+    animation: about_header 1.5s;
+}
+@keyframes about_header {
+    from{
+        margin-left: 20px;
+        color: rgba(255, 255, 255, 0);
+    }
+    50%{
+        margin-left: 120px;
+    }
+    to{
+        margin-left: 100px;
+        color: white;
+    }
+}
+#about span::before{
+    content: '';
+    position: absolute;
+    left: 600px;
+    top: 570px;
+    height: 1px;
+    width: 80px;
+    background-color: white;
+    animation: about_header_before 1.5s;
+    transform: translate(-50%);
+}
+@keyframes about_header_before {
+    from{
+        left: 520px;
+        top: 570px;
+        background-color: rgba(255, 255, 255, 0);
+        width: 0px;
+    }
+    50%{
+        left: 620px;
+    }
+    to{
+        left: 600px;
+        top: 570px;
+        background-color: white;
+        width: 80px;
+    }
+}
+#about .about_h1_first{
+    color: white;
+    margin-top: 30px;
+    margin-left: 100px;
+    font-size: 50px;
+    font-family: 'Dancing Script', cursive;
+    animation: about_h1_first 1.5s;
+    display: inline-block;
+}
+@keyframes about_h1_first {
+    from{
+        color: rgba(255, 255, 255, 0);
+        margin-top: 30px;
+        margin-left: 20px;
+    }
+    to{
+        color: white;
+        margin-top: 30px;
+        margin-left: 100px;
+    }
+}
+#about .about_me_parent{
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+#about .about_me_parent .about_me .about_me2{
+    text-align: start;
+    justify-content: start;
+    align-items: flex-start;
+    margin-left: 60px;
+}
+#about .about_me_parent .about_me1{
+    margin-left: 150px;
+    opacity: 1;
+    animation: about_img 1.5s;
+}
+@keyframes about_img {
+    from{
+        margin-left: 70px;
+        opacity: 0;
+    }
+    to{
+        margin-left: 150px;
+        opacity: 1;
+    }
+}
+#about .about_me_parent .about_me1 img{
+    height: 500px;
+}
+#about .about_me_parent .about_me{
+    margin-right: 0;
+    opacity: 1;
+    width: 55%;
+    margin-right: 40px;
+    animation: about_me_information 1.5s;
+}
+@keyframes about_me_information {
+    from{
+        opacity: 0;
+        margin-right: -40px;
+    }
+    to{
+        opacity: 1;
+        margin-right: 40px;
+    }
+}
+#about .about_me_parent .about_me h1{
+    font-size: 38px;
+    color: white;
+    margin-right: 100px;
+    margin-top: -120px;
+    padding-bottom: 50px;
+    font-family: 'Dancing Script', cursive;
+}
+#about .about_me_parent .about_me .about_p1{
+    color: white;
+    text-align: start;
+    font-size: 20px;
+    letter-spacing: 2px;
+    line-height: 22px;
+    font-style: italic;
+    font-family: cursive;
+    font-weight: normal;
+    margin-left: 60px;
+    display: inline-block;
+}
+#about .about_me_parent .about_me p{
+    color: white;
+    text-align: start;
+    font-size: 19px !important;
+    letter-spacing: 2px;
+    line-height: 22px;
+    font-style: italic;
+    font-family: cursive;
+    font-weight: normal;
+    margin-left: 20px;
+    display: inline-block;
+}
+#about .about_me_parent .about_me h2{
+    display: inline-block;
+    text-align: start;
+    color: white;
+    font-size: 25px;
+    font-family: 'Dancing Script', cursive;
+    margin: 0;
+    margin-top: 30px;
+}
+
+
+
+
+
+                    /* Programming Skills */
+
+
+
+
+
+#about .skillparent{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+#about .skillparent .skill_1_parent .skill_1{
+    border: 1px solid white;
+    height: 20px;
+    width: 300px;
+    border-radius: 20px;
+}
+#about .skillparent .skill_1_parent .skill_1::before{
+    content: '';
+    position: absolute;
+    background-color: white;
+    width: 240px;
+    height: 12px;
+    border-radius: 20px;
+    top: 1350px;
+    left: 520px;
+    animation: skill_1_before 2s;
+}
+@keyframes skill_1_before {
+    from{
+        background-color: rgb(255, 255, 255);
+        width: 0px;
+    }
+    to{
+        background-color: white;
+        width: 240px;
+    }
+}
+#about .skillparent .skill_1_parent .skill_1::after{
+    content: '80%';
+    position: absolute;
+    color: white;
+    font-family: 'Dancing Script', cursive;
+    left: 740px;
+    top: 1325px;
+    animation: skill_1_after 2s;
+}
+@keyframes skill_1_after {
+    from{
+        left: 500px;
+        opacity: 0;
+    }
+    to{
+        left: 740px;
+        opacity: 1;
+    }
+}
+#about .skillparent .skill_1_parent .skill_2{
+    border: 1px solid white;
+    height: 20px;
+    width: 300px;
+    border-radius: 20px;
+}
+#about .skillparent .skill_1_parent .skill_2::before{
+    content: '';
+    position: absolute;
+    background-color: white;
+    width: 210px;
+    height: 12px;
+    border-radius: 20px;
+    top: 1454px;
+    left: 520px;
+    animation: skill_2_before 2s;
+}
+@keyframes skill_2_before {
+    from{
+        width: 0px;
+    }
+    to{
+        width: 210px;
+    }
+}
+#about .skillparent .skill_1_parent .skill_2::after{
+    content: '70%';
+    position: absolute;
+    color: white;
+    font-family: 'Dancing Script', cursive;
+    left: 710px;
+    top: 1428px;
+    animation: skill_2_after 2s;
+}
+@keyframes skill_2_after {
+    from{
+        opacity: 0;
+        left: 500px;
+    }
+    to{
+        opacity: 1;
+        left: 710px;
+    }
+}
+#about .skillparent .skill_1_parent .skill_3{
+    border: 1px solid white;
+    height: 20px;
+    width: 300px;
+    border-radius: 20px;
+}
+#about .skillparent .skill_1_parent .skill_3::before{
+    content: '';
+    position: absolute;
+    background-color: white;
+    width: 135px;
+    height: 12px;
+    border-radius: 20px;
+    top: 1558px;
+    left: 520px;
+    animation: skill_3_before 2s;
+}
+@keyframes skill_3_before {
+    from{
+        width: 0;
+    }
+    to{
+        width: 135px;
+    }
+}
+#about .skillparent .skill_1_parent .skill_3::after{
+    content: '45%';
+    position: absolute;
+    color: white;
+    font-family: 'Dancing Script', cursive;
+    left: 640px;
+    top: 1532px;
+    animation: skill_3_after 2s;
+}
+@keyframes skill_3_after {
+    from{
+        opacity: 0;
+        left: 500px;
+    }
+    to{
+        opacity: 1;
+        left: 640px;
+    }
+}
+#about .skillparent .skill_2_parent .skill_4{
+    border: 1px solid white;
+    height: 20px;
+    width: 300px;
+    border-radius: 20px;
+    margin-top: 0px;
+}
+#about .skillparent .skill_2_parent .skill_4::before{
+    content: '';
+    position: absolute;
+    background-color: white;
+    width: 150px;
+    height: 12px;
+    border-radius: 20px;
+    top: 1402px;
+    left: 1090px;
+    animation: skill_4_before 2s;
+}
+@keyframes skill_4_before {
+    from{
+        width: 0;
+    }
+    to{
+        width: 150px;
+    }
+}
+#about .skillparent .skill_2_parent .skill_4::after{
+    content: '50%';
+    position: absolute;
+    color: white;
+    font-family: 'Dancing Script', cursive;
+    left: 1220px;
+    top: 1378px;
+    animation: skill_4_after 2s;
+}
+@keyframes skill_4_after {
+    from{
+        left: 1080px;
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+        left: 1220px;
+    }
+}
+#about .skillparent .skill_2_parent .skill_5{
+    border: 1px solid white;
+    height: 20px;
+    width: 300px;
+    border-radius: 20px;
+}
+#about .skillparent .skill_2_parent .skill_5::before{
+    content: '';
+    position: absolute;
+    background-color: white;
+    width: 135px;
+    height: 12px;
+    border-radius: 20px;
+    top: 1506px;
+    left: 1090px;
+    animation: skill_5_before 2s;
+}
+@keyframes skill_5_before {
+    from{
+        width: 0;
+    }
+    to{
+        width: 135px;
+    }
+}
+#about .skillparent .skill_2_parent .skill_5::after{
+    content: '45%';
+    position: absolute;
+    color: white;
+    font-family: 'Dancing Script', cursive;
+    left: 1210px;
+    top: 1482px;
+    animation: skill_5_after 2s;
+}
+@keyframes skill_5_after {
+    from{
+        left: 1080px;
+        opacity: 0;
+    }
+    to{
+        left: 1210px;
+        opacity: 1;
+    }
+}
+#about .skillparent .skill_1_parent figcaption{
+    color: white;
+    margin-left: -380px;
+    font-size: 20px;
+    font-family: 'Dancing Script', cursive;
+    margin-top: 60px;
+    animation: figcaption_anim1 1.5s;
+}
+@keyframes figcaption_anim1 {
+    from{
+        color: rgba(255, 255, 255, 0);
+        margin-left: -460px;
+    }
+    to{
+        color: white;
+        margin-left: -380px;
+    }
+}
+#about .skillparent .skill_2_parent figcaption{
+    color: white;
+    margin-left: -380px;
+    font-size: 20px;
+    font-family: 'Dancing Script', cursive;
+    margin-top: 60px;
+    animation: figcaption_anim2 1.5s;
+}
+@keyframes figcaption_anim2 {
+    from{
+        color: rgba(255, 255, 255, 0);
+        margin-left: -460px;
+    }
+    to{
+        color: white;
+        margin-left: -380px;
+    }
+}
+
+
+
+
+
+                    /* Interests */
+
+
+
+
+
+#about .interests_parent{
+    margin-top: 50px;
+}
+#about .interests_parent span{
+    color: white;
+    font-size: 29px;
+    font-family: 'Dancing Script', cursive;
+    margin-left: 100px;
+    display: block;
+    animation: about_header 1.5s;
+}
+#about .interests_parent span::before{
+    content: '';
+    position: absolute;
+    left: 630px;
+    top: 1645px;
+    height: 1px;
+    width: 80px;
+    background-color: rgb(255, 255, 255);
+    animation: about_header_before_2 1.5s;
+    transform: translate(-50%);
+}
+@keyframes about_header_before_2 {
+    from{
+        left: 550px;
+        top: 1645px;
+        background-color: rgba(255, 255, 255, 0);
+        width: 0px;
+    }
+    50%{
+        left: 650px;
+    }
+    to{
+        left: 630px;
+        top: 1645px;
+        background-color: white;
+        width: 80px;
+    }
+}
+#about .interests_parent .interests_img_parent{
+    margin: 30px auto;
+}
+#about .interests_parent .interests_img_parent .button_parent{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    animation: button_line_1 1.5s;
+}
+@keyframes button_line_1 {
+    from{
+        opacity: 0;
+        margin-left: 100px;
+    }
+    50%{
+        margin-left: -40px;
+    }
+    to{
+        opacity: 1;
+        margin-left: 0;
+    }
+}
+#about .interests_parent .interests_img_parent .button_parent .button{
+    height: 80px;
+    width: 200px;
+    border: 1px solid rgba(255, 255, 255, 0);
+    border-bottom: 1px solid white;
+    margin: 20px 30px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    border-radius: 20px;
+    transition: .5s;
+}
+#about .interests_parent .interests_img_parent .button_parent .button:hover{
+    border: 1px solid rgb(255, 255, 255);
+    cursor: pointer;
+    transform: scale(1.1);
+    box-shadow: 0 0 10px 1px white;
+}
+#about .interests_parent .interests_img_parent .button_parent .button img{
+    height: 40px;
+    width: 50px;
+}
+#about .interests_parent .interests_img_parent .button_parent .button h3{
+    color: white;
+    font-family: 'Dancing Script', cursive;
+    font-size: 20px;
+    padding-left: 15px;
+}
+#about .interests_parent .interests_img_parent .button_parent1{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    animation: button_line_2 1.5s;
+}
+@keyframes button_line_2 {
+    from{
+        opacity: 0;
+        margin-right: 100px;
+    }
+    50%{
+        margin-right: -40px;
+    }
+    to{
+        opacity: 1;
+        margin-right: 0;
+    }
+}
+#about .interests_parent .interests_img_parent .button_parent1 .button{
+    height: 80px;
+    width: 200px;
+    border: 1px solid rgba(255, 255, 255, 0);
+    border-bottom: 1px solid white;
+    margin: 20px 30px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    border-radius: 20px;
+    transition: .5s;
+}
+#about .interests_parent .interests_img_parent .button_parent1 .button:hover{
+    border: 1px solid rgb(255, 255, 255);
+    cursor: pointer;
+    transform: scale(1.1);
+    box-shadow: 0 0 10px 1px white;
+}
+#about .interests_parent .interests_img_parent .button_parent1 .button img{
+    height: 40px;
+    width: 50px;
+}
+#about .interests_parent .interests_img_parent .button_parent1 .button h3{
+    color: white;
+    font-family: 'Dancing Script', cursive;
+    font-size: 20px;
+    padding-left: 15px;
+}
+
+
+
+
+
+                    /* Contact */
+
+
+
+
+
+#contact{
+    margin-top: 50px;
+    margin-bottom: 30px;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    border-radius: 20px;
+    padding: 20px;
+    padding-bottom: 40px;
+    position: relative;
+}
+#contact span{
+    color: white;
+    font-size: 32px;
+    font-family: 'Dancing Script', cursive;
+    margin-left: 100px;
+    display: block;
+    animation: contact_header 1.5s;
+}
+@keyframes contact_header {
+    from{
+        margin-left: 20px;
+        color: rgba(255, 255, 255, 0);
+    }
+    50%{
+        margin-left: 120px;
+    }
+    to{
+        margin-left: 100px;
+        color: white;
+    }
+}
+#contact span::before{
+    content: '';
+    position: absolute;
+    left: 270px;
+    top: 40px;
+    height: 1px;
+    width: 80px;
+    background-color: rgb(255, 255, 255);
+    animation: contact_header_before 1.5s;
+    transform: translate(-50%);
+}
+@keyframes contact_header_before {
+    from{
+        left: 190px;
+        top: 40px;
+        background-color: rgba(255, 255, 255, 0);
+        width: 0px;
+    }
+    50%{
+        left: 300px;
+    }
+    to{
+        left: 270px;
+        top: 40px;
+        background-color: white;
+        width: 80px;
+    }
+}
+#contact .contact_h1_first{
+    color: white;
+    margin-top: 30px;
+    margin-left: 100px;
+    font-size: 50px;
+    font-family: 'Dancing Script', cursive;
+    animation: contact_h1_first 1.5s;
+    display: inline-block;
+}
+@keyframes contact_h1_first {
+    from{
+        color: rgba(255, 255, 255, 0);
+        margin-top: 30px;
+        margin-left: 20px;
+    }
+    to{
+        color: white;
+        margin-top: 30px;
+        margin-left: 100px;
+    }
+}
+#contact .contact_parent_1{
+    display: flex;
+    margin-top: 30px;
+}
+#contact .contact_parent_1 .parent_1_div{
+    background-color: rgba(76, 76, 76, 0.7);
+    height: 70px;
+    width: 540px;
+    margin: 5px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    padding-left: 40px;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0);
+    transition: .5s;
+}
+#contact .contact_parent_1 .parent_1_div:hover{
+    border: 1px solid rgb(255, 255, 255);
+    background-color: rgba(76, 76, 76, 0);
+}
+#contact .contact_parent_1 .parent_1_div:hover .img{
+    border: 1px solid rgb(255, 255, 255);
+}
+#contact .contact_parent_2{
+    display: flex;
+}
+#contact .contact_parent_2 .parent_2_div{
+    background-color: rgba(76, 76, 76, 0.7);
+    height: 70px;
+    width: 540px;
+    margin: 5px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    padding-left: 40px;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0);
+    transition: .5s;
+}
+#contact .contact_parent_2 .parent_2_div:hover .img{
+    border: 1px solid rgb(255, 255, 255);
+}
+#contact .contact_parent_2 .parent_2_div:hover{
+    background-color: rgba(76, 76, 76, 0);
+    border: 1px solid rgb(255, 255, 255);
+}
+#contact .img{
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0);
+    padding: 10px;
+    transition: .5s;
+}
+#contact img{
+    height: 30px;
+    width: 30px;
+}
+#contact .parent_1_div_2{
+    margin-left: 30px;
+}
+#contact .parent_1_div_2 h4{
+    font-size: 20px;
+    color: white;
+    letter-spacing: 2px;
+}
+#contact .parent_1_div_2 p{
+    color: white;
+    font-size: 18px;
+    margin-left: 10px;
+    margin-top: 5px;
+    letter-spacing: 1px;
+    font-weight: normal;
+    font-style: italic;
+}
+#contact .profile_icons{
+    margin-left: 10px;
+    margin-top: 5px;
+}
+#contact .profile_icons img{
+    height: 18px;
+    width: 18px;
+    margin-left: 5px;
+}
+#contact .contact_parent_3{
+    background-color: rgba(76, 76, 76, 0.5);
+    padding: 15px;
+    margin-top: 30px;
+    border-radius: 20px;
+    animation: contact_anim_3 1.5s;
+}
+@keyframes contact_anim_3 {
+    from{
+        margin-top: 110px;
+        opacity: 0;
+    }
+    to{
+        margin-top: 30px;
+        opacity: 1;
+    }
+}
+#contact .contact_parent_3 .input_1_parent{
+    display: flex;
+    justify-content: space-around;
+}
+#contact .contact_parent_3 .input_1_parent input::placeholder{
+    color: white;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-style: italic;
+}
+#contact .contact_parent_3 .input_1_parent input{
+    width: 500px;
+    background-color: rgba(100, 100, 100, 0.5);
+    border: none;
+    outline: none;
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0);
+    color: white;
+    font-size: 17px;
+    padding-left: 30px;
+    transition: .5s;
+}
+#contact .contact_parent_3 .input_1_parent input:hover{
+    border: 1px solid rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.527);
+}
+#contact .contact_parent_3 .input_1_parent input:focus{
+    border: 1px solid rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.527);
+}
+#contact .contact_parent_3 input::placeholder{
+    color: white;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-style: italic;
+}
+#contact .contact_parent_3 input{
+    width: 1040px;
+    background-color: rgba(100, 100, 100, 0.5);
+    border: none;
+    outline: none;
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0);
+    color: white;
+    font-size: 17px;
+    padding-left: 30px;
+    margin: 10px 15px;
+    transition: .5s;
+}
+#contact .contact_parent_3 input:hover{
+    border: 1px solid rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.527);
+}
+#contact .contact_parent_3 input:focus{
+    border: 1px solid rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.527);
+}
+#contact .contact_parent_3 .message::placeholder{
+    color: white;
+    letter-spacing: 1px;
+    font-style: italic;
+}
+#contact .contact_parent_3 .message{
+    width: 1040px;
+    background-color: rgba(100, 100, 100, 0.5);
+    border: none;
+    outline: none;
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0);
+    color: white;
+    font-size: 17px;
+    padding-left: 30px;
+    margin: 10px 15px;
+    transition: .5s;
+}
+#contact .contact_parent_3 .message:hover{
+    border: 1px solid rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.527);
+}
+#contact .contact_parent_3 .message:focus{
+    border: 1px solid rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.527);
+}
+#contact .contact_parent_3 .send{
+    width: 120px;
+    background-color: rgba(100, 100, 100, 0.5);
+    border: none;
+    outline: none;
+    padding: 0;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0);
+    color: white;
+    font-size: 17px;
+    transition: .5s;
+    height: 60px;
+    cursor: pointer;
+    margin-left: 50%;
+    transform: translate(-50%);
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-style: italic;
+}
+#contact .contact_parent_3 .send:hover{
+    border: 1px solid rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.527);
+}
+#contact .contact_parent_3 .send:focus{
+    border: 1px solid rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.527);
+}
+#contact #contact_anim_1, #contact_anim_3{
+    animation: contact_anim_1 1.5s;
+}
+@keyframes contact_anim_1 {
+    from{
+        margin-left: -80px;
+        opacity: 0;
+    }
+    to{
+        margin-left: 5px;
+        opacity: 1;
+    }
+}
+#contact #contact_anim_2, #contact_anim_4{
+    animation: contact_anim_2 1.5s;
+    position: absolute;
+    right: 20px;
+}
+@keyframes contact_anim_2 {
+    from{
+        opacity: 0;
+        right: -60px;
+    }
+    to{
+        opacity: 1;
+        right: 20px;
+    }
+}
